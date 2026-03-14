@@ -13,6 +13,7 @@ runs:
     - ${{ inputs.itemId }}
     - ${{ inputs.contentPath }}
     - ${{ inputs.changelog }}
+    - ${{ inputs.configVdf }}
 
 inputs:
   appId:
@@ -29,4 +30,8 @@ inputs:
   contentPath:
     description: 'Path of folder to upload'
     required: true
+  configVdf:
+    description: 'Optional config.vdf contents'
+    required: false
+    default: ''
 

@@ -8,6 +8,11 @@ repo=`pwd`
 export HOME=/home/steam
 cd $STEAMCMDDIR
 
+if [ -n "$5" ]; then
+    mkdir -p /home/steam/Steam/config
+    echo "$5" > /home/steam/Steam/config/config.vdf
+fi
+
 echo "Uploading item $2 for app $1 from $3"
 
 cat << EOF > ./workshop.vdf
